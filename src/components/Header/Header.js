@@ -4,6 +4,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasket from "@material-ui/icons/ShoppingCart";
 import logo from "../../assets/Fusion.png";
 import "./header.css";
+import { useStateValue } from "../../StateProvider";
 
 // logo on left
 //search bar
@@ -11,6 +12,9 @@ import "./header.css";
 //basket shopping cart
 
 const Header = () => {
+  const [{ basket }] = useStateValue();
+
+  console.log(basket, "this is my basket");
   return (
     <nav className="header">
       <div className="header__logo-container">
@@ -47,7 +51,7 @@ const Header = () => {
       <div className="header__basket-container">
         <Link to="/checkout" className="header__link">
           <div className="header__option-basket">
-            <span className="header__link-two header__basket-count">0</span>
+            <span className="header__link-two header__basket-count">{basket?.length}</span>
             <ShoppingBasket />
           </div>
         </Link>
