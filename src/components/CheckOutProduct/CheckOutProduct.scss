@@ -1,0 +1,49 @@
+.checkout-product {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  margin: 1rem;
+  padding: 1.875rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 1px solid #2f1728;
+  color: #2f1728;
+  border-radius: 3.2px;
+  &__image {
+    object-fit: contain;
+    width: 11.25rem;
+    height: 11.25rem;
+  }
+  &__info {
+    margin-left: 1.25rem;
+  }
+  &__btn {
+    background-color: #8d726b;
+    height: 2.25rem;
+    width: 10rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #2f1728;
+    border-radius: 0.3rem;
+    color: snow;
+    &:active :focus {
+      outline-color: #2f1728;
+      border: none;
+    }
+  }
+  &__rating {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  &__price {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+ 
+}
