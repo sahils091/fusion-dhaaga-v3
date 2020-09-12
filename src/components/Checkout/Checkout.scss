@@ -1,0 +1,34 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fff5d7;
+  color: #2f1728;
+
+  &__image {
+    background-image: url("../../assets/scarf1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+  }
+  &__subtotal {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  &__header {
+    margin-right: 1rem;
+    padding: 10px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    color: #2f1728;
+  }
+
+  &__header-container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
