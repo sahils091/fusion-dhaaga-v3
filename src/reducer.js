@@ -1,28 +1,34 @@
 export const initialState = {
-    basket: [],
+  basket: [],
 };
 
+const reducer = (state, action) => {
+  console.log(action, "show me the action");
 
-const reducer =(state, action) => {
-    console.log(action, "show me the action")
+  switch (action.type) {
+    case "ADD_TO_BASKET":
+      // adding item to basket
+      return {
+        ...state,
+        basket: [...state.basket, action.item],
+      };
 
-    switch (action.type){
-         case 'ADD_TO_BASKET':
-            // adding item to basket
-            return {
-                ...state,
-                basket: [...state.basket, action.item]
-            }
+    case "REMOVE_FROM_BASKET":
+      //remove from basket
+      let newBasket = [...state.basket];
+      const index = state.basket.findIndex(
+        (basketItem) => basketItem.id === action.id
+      );
+      if (index >= 0) {
+        newBasket.splice(index, 1);
+      } else {
+        console.warn("Cant Remove Product");
+      }
+      return { ...state, basket: newBasket };
 
-         
-         case 'REMOVE_FROM_BASKET':
-             //remove from basket 
-             return {state}
-      
-        default:
-          return state  
-    }
-}
-
+    default:
+      return state;
+  }
+};
 
 export default reducer;
