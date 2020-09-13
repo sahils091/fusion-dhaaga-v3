@@ -1,6 +1,6 @@
-import React, { useReducer, useState } from "react";
+import React, { useState } from "react";
 import "./Login.scss";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { auth } from "../../firebase";
 
 const Login = (props) => {
@@ -21,7 +21,6 @@ const Login = (props) => {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
-        console.log(auth);
         if (auth) {
           history.push("/");
         }
@@ -33,7 +32,7 @@ const Login = (props) => {
       <div className="login__form-container">
         <h1 className="login__form-header">Sign-in</h1>
         <form className="login__form">
-          <h5 className="login__form-label">E-mail</h5>
+          <h3 className="login__form-label">E-mail</h3>
           <input
             className="login__form-input"
             type="text"
@@ -41,7 +40,7 @@ const Login = (props) => {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <h5 className="login__form-label">Password</h5>
+          <h3 className="login__form-label">Password</h3>
           <input
             className="login__form-input"
             type="password"
@@ -57,7 +56,6 @@ const Login = (props) => {
         <button onClick={register} className="login__btn-register">
           Click to Register
         </button>
-     
       </div>
     </div>
   );

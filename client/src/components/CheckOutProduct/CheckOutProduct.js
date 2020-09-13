@@ -3,7 +3,7 @@ import { useStateValue } from "../../StateProvider";
 import "./CheckOutProduct.scss";
 
 const CheckOutProduct = ({ id, title, image, price, rating }) => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{},dispatch] = useStateValue();
 
   const removeFromBasket = () => {
     dispatch({
@@ -15,7 +15,7 @@ const CheckOutProduct = ({ id, title, image, price, rating }) => {
     <div className="checkout-product">
       <img className="checkout-product__image" src={image} />
       <div className="checkout-product__info">
-        <p className="checkout-product__title"> {title}</p>
+        <h3 className="checkout-product__title"> {title}</h3>
         <p className="checkout-product__price">
           <em>$</em>
           <strong>{price}</strong>

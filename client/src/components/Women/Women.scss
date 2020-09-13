@@ -1,6 +1,12 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
 .women {
     padding-right: 1rem;
     padding-left: 1rem;
+    background-color: $page-bg;
+    transition: all ease-in 0.5s;
   
     &__header {
       margin-top: 1rem;
@@ -20,9 +26,15 @@
       justify-content: center;
       align-items: center;
       transition: all ease-in 0.5s;
-      color: #2f1728;
+      color: $text-color;
       margin-top: 2rem;
       margin-bottom: 2rem;
       flex-wrap: wrap;
+    }
+    &__products {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
   }

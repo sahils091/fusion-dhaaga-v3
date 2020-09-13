@@ -8,6 +8,9 @@ const Home = () => {
   const [productList, setProductList] = useState([]);
   const [search, setSearch] = useState(null);
 
+  const randId = () => {
+    return Math.ceil(Math.random() * 2658475);
+  };
   const searchKey = (e) => {
     let keyword = e.target.value;
     setSearch(keyword);
@@ -21,7 +24,6 @@ const Home = () => {
       setProducts(res.data);
     });
   }, []);
-  console.log(products);
   return (
     <main className="home">
       <div className="home__banner-container">
@@ -41,6 +43,7 @@ const Home = () => {
                 price={item.price}
                 rating={item.rating}
                 image={item.image}
+                key={randId()}
               />
             );
           })}
@@ -50,7 +53,7 @@ const Home = () => {
       <div className="home__products">
         <h1 className="home__header">Our Collection</h1>
         <div className="home__search">
-          <h5 className="home__form-label">Search</h5>
+          <h3 className="home__form-label">Search</h3>
           <input
             className="home__form-input"
             name="search"
@@ -82,6 +85,7 @@ const Home = () => {
                   price={item.price}
                   rating={item.rating}
                   image={item.image}
+                  key={randId()}
                 />
               );
             })}

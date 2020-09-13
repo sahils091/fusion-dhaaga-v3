@@ -1,21 +1,31 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
 .checkout {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: #fff5d7;
-  color: #2f1728;
+  color: $text-color;
+  background-color: $page-bg;
 
   &__image {
     background-image: url("../../assets/thread2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 21.875rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include tablet {
+      height: 28.125rem;
+    }
+    @include desktop {
+      height: 34.375rem;
+    }
   }
   &__subtotal {
     margin-bottom: 1rem;
@@ -26,7 +36,7 @@
     padding: 0.625rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
-    color: #2f1728;
+    color: $text-color;
  
   }
 
@@ -37,7 +47,7 @@
   }
   &__image-title {
     margin-bottom: 1rem;
-    border: 2px solid #2f1728;
+    border: 2px solid $text-color;
     padding: 1.25rem;
     border-radius: 1rem;
 

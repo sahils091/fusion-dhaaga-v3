@@ -1,5 +1,9 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
 .home {
-  background-color: #fff5d7;
+  background-color: $page-bg;
   transition: all ease-in 0.5s;
 
   &__banner-container {
@@ -9,18 +13,24 @@
     max-width: 93.75rem;
     margin-left: auto;
     margin-right: auto;
-    height: 550px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include tablet {
+      height: 450px;
+    }
+    @include desktop {
+      height: 650px;
+    }
   }
 
   &__banner-title {
-    color: snow;
+    color: $link-text-color;
     transition: all ease-in 1s;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border: 2px solid #2f1728;
+    border: 2px solid $text-color;
     padding: 10px;
     border-radius: 1rem;
   }
@@ -34,6 +44,8 @@
     z-index: 1;
     margin-left: 5px;
     margin-right: 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   &__new {
     display: flex;
@@ -41,9 +53,11 @@
     justify-content: center;
     align-items: center;
     transition: all ease-in 0.5s;
-    color: #2f1728;
+    color: $text-color;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   &__header {
     margin-top: 1rem;
@@ -68,7 +82,7 @@
     justify-content: center;
     align-items: center;
     transition: all ease-in 0.5s;
-    color: #2f1728;
+    color: $text-color;
     margin-top: 2rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
@@ -80,14 +94,21 @@
   &__form-input {
     height: 1.875rem;
     margin-bottom: 1rem;
-    width: 30rem;
-    border: 1px solid #2f1728;
+    width: 100%;
+    border: 1px solid $text-color;
     border-radius: 0.3rem;
     font-size: 1rem;
+    color: $text-color;
 
     &:active :focus {
-      outline-color: #2f1728;
+      outline-color: $text-color;
       border: none;
+    }
+    @include tablet {
+      width: 25rem;
+    }
+    @include desktop {
+      width: 30rem;
     }
   }
 }

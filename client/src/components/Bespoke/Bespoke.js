@@ -1,10 +1,36 @@
 import React from "react";
+import axios from "axios";
 import "./Bespoke.scss";
 import bespoke1 from "../../assets/bespoke1.jpg";
 import bespoke2 from "../../assets/bespoke2.jpg";
 import bespoke3 from "../../assets/bespoke3.jpg";
 
 const Bespoke = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const phone = e.target.phone.value;
+    const appointment = e.target.appointment.value;
+    const date = e.target.date.value;
+    const message = e.target.message.value;
+    axios
+      .post("http://localhost:8080/user/message", {
+        name: name,
+        email: email,
+        phone: phone,
+        appointment: appointment,
+        date: date,
+        message: message,
+      })
+      .then((res) => {
+        console.log(res);
+        return res;
+      })
+      .catch((error) => {
+        console.warn(error);
+      });
+  };
   return (
     <div className="bespoke">
       <div className="bespoke__banner">
@@ -30,7 +56,7 @@ const Bespoke = () => {
       <div className="bespoke__options">
         <h3 className="bespoke__options-header">1. Colours</h3>
         <div className="bespoke__options-container">
-          <p className="bespoke__options-blurb">
+          <p className="bespoke__options-blurb bespoke__options-blurb--first">
             Colour selection is an art in itself, especially when it comes to
             combinations. You will receive expert advice; taking into
             consideration your taste, the style and embroidery of the design,
@@ -58,7 +84,7 @@ const Bespoke = () => {
               alt="bespoke"
             />
           </div>
-          <p className="bespoke__options-blurb">
+          <p className="bespoke__options-blurb ">
             The bespoke service offers you the benefit of making a changes to
             the structure of a design, for example add or detract sleeves; minor
             modifications to the necklines; change hemlines within reason, etc.
@@ -70,7 +96,7 @@ const Bespoke = () => {
       <div className="bespoke__options">
         <h3 className="bespoke__options-header">3. Made-to-measure</h3>
         <div className="bespoke__options-container">
-          <p className="bespoke__options-blurb">
+          <p className="bespoke__options-blurb bespoke__options-blurb--first">
             Perhaps most importantly the Bespoke Service includes a
             made-to-measure service. We take up to thirty measurements and use
             them to draft a personalised pattern tailored to your body for the
@@ -91,23 +117,52 @@ const Bespoke = () => {
       <div className="bespoke__form-wrapper">
         <div className="bespoke__form-container">
           <h1 className="bespoke__form-header">Book an Appointment</h1>
-          <form className="bespoke__form">
-            <h5 className="bespoke__form-label">Full Name *</h5>
-            <input className="bespoke__form-input" type="text" />
+          <form className="bespoke__form" onSubmit={submitHandler}>
+            <h3 className="bespoke__form-label">Full Name *</h3>
+            <input
+              className="bespoke__form-input"
+              type="text"
+              name="name"
+              id="name"
+            />
 
-            <h5 className="bespoke__form-label">Password *</h5>
-            <input className="bespoke__form-input" type="text" />
-            <h5 className="bespoke__form-label">Appointment Type *</h5>
-            <input className="bespoke__form-input" type="text" />
-            <h5 className="bespoke__form-label">Phone *</h5>
-            <input className="bespoke__form-input" type="number" />
+            <h3 className="bespoke__form-label">Email *</h3>
+            <input
+              className="bespoke__form-input"
+              type="text"
+              name="email"
+              id="email"
+            />
+            <h3 className="bespoke__form-label">Appointment Type *</h3>
+            <input
+              className="bespoke__form-input"
+              type="email"
+              name="appointment"
+              id="appointment"
+            />
+            <h3 className="bespoke__form-label">Phone *</h3>
+            <input
+              className="bespoke__form-input"
+              type="number"
+              name="phone"
+              id="phone"
+            />
 
-            <h5 className="bespoke__form-label">
+            <h3 className="bespoke__form-label">
               Preferred Appointment Date 1* (DD/MM/YYYY)
-            </h5>
-            <input className="bespoke__form-input" type="text" />
-            <h5 className="bespoke__form-label">Your Message</h5>
-            <textarea className="bespoke__form-input"></textarea>
+            </h3>
+            <input
+              className="bespoke__form-input"
+              type="text"
+              name="date"
+              id="date"
+            />
+            <h3 className="bespoke__form-label">Your Message</h3>
+            <textarea
+              className="bespoke__form-input"
+              name="message"
+              id="message"
+            ></textarea>
 
             <button type="submit" className="bespoke__btn-signin">
               Send Message

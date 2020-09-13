@@ -1,12 +1,23 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
 .header {
-  background-color: #8F746E;
+  background-color: $header-bg;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 0;
   position: sticky;
   top: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
   z-index: 100;
-  justify-content: space-between;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &__logo {
     width: 300x;
@@ -16,25 +27,14 @@
     object-fit: contain;
     cursor: pointer;
   }
-  &__search-container {
-    display: flex;
-    flex: 1;
-  }
-  &__search-icon {
-    background-color: snow;
-  }
-
-  &__search {
-    height: 1.5rem;
-    width: 100%;
-    border: none;
-  }
   &__link-container {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   &__link {
-    color: snow;
+    color: $link-text-color;
     text-decoration: none;
   }
   &__link-options {
@@ -54,6 +54,10 @@
   &__option-basket {
     display: flex;
     align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    @include tablet {
+    }
   }
 
   &__basket-count {
@@ -62,7 +66,7 @@
   }
 
   &__link--active {
-    border-bottom: 0.0625rem solid #dcafa5;
+    border-bottom: 0.0625rem solid $link-active;
   }
   &__cart-container {
     display: flex;
