@@ -1,0 +1,47 @@
+[
+  {
+    "id": "a4fead31-fa05-492c-bacd-5d0ac3ab9221",
+    "name": " Embroidered Navy Blue set",
+    "category": "men",
+    "price": 100,
+    "occasion": "casual",
+    "image": "http://localhost:8080/data12.jpg",
+    "rating": 4
+  },
+  {
+    "id": "ba501de4-cbc7-48ef-a1ae-95778f4ea374",
+    "name": "Embroidered Kurta Set",
+    "category": "men",
+    "price": 85,
+    "occasion": "casual",
+    "image": "http://localhost:8080/data13.jpg",
+    "rating": 3
+  },
+  {
+    "id": "32ffacbc-bdb8-484b-84a9-c40dcff838ee",
+    "name": "Gold Kurta Set",
+    "category": "men",
+    "price": 200,
+    "occasion": "casual",
+    "image": "http://localhost:8080/data14.jpg",
+    "rating": 3
+  },
+  {
+    "id": "daaa7a13-e925-424e-90f9-c49f39ec6c1d",
+    "name": "Embroidered Kurta Set ",
+    "category": "men",
+    "price": 65,
+    "occasion": "casual",
+    "image": "http://localhost:8080/data15.jpg",
+    "rating": 4
+  },
+  {
+    "id": "daaa7a13-e925-424e-90f9-c49f39ec6c1d",
+    "name": "Embroidered Kurta Set",
+    "category": "men",
+    "price": 70,
+    "occasion": "casual",
+    "image": "http://localhost:8080/data16.jpg",
+    "rating": 4
+  }
+]

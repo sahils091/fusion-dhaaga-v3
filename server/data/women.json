@@ -1,0 +1,78 @@
+[
+    {
+        "id": "180fb2c5-c9e9-4549-86aa-80f939513068",
+        "name": "Red Embroidered Kurta Set",
+        "category": "women",
+        "price": 180,
+        "occasion": "casual",
+        "image": "http://localhost:8080/data8.jpg",
+        "rating": 3
+      },
+      {
+        "id": "3403c3b3-bbfe-48d7-9e30-768b33756553",
+        "name": "Navy Kurta Set",
+        "category": "women",
+        "price": 90,
+        "occasion": "bridal",
+        "image": "http://localhost:8080/data9.jpg",
+        "rating": 4
+      }, {
+        "id": "f83137ce-a859-45ac-8efe-7b3545aa8c22",
+        "name": "Printed kurta set",
+        "category": "women",
+        "price": 110,
+        "occasion": "casual",
+         "image": "http://localhost:8080/data10.jpg",
+        "rating": 4
+      },
+      {
+        "id": "180fb2c5-c9e9-4549-86aa-80f939513068",
+        "name": "Grey Embroidered Kurta Set",
+        "category": "women",
+        "price": 100,
+        "occasion": "casual",
+        "image": "http://localhost:8080/data1.jpg",
+        "rating": 3
+      },
+      {
+        "id": "3403c3b3-bbfe-48d7-9e30-768b33756553",
+        "name": "Teal Kurta Set",
+        "category": "women",
+        "price": 120,
+        "occasion": "casual",
+        "image": "http://localhost:8080/data2.jpg",
+        "rating": 4
+      }, {
+        "id": "f83137ce-a859-45ac-8efe-7b3545aa8c22",
+        "name": "Embroidered kurta set",
+        "category": "women",
+        "price": 180,
+        "occasion": "casual",
+         "image": "http://localhost:8080/data3.jpg",
+        "rating": 4
+      }, {
+        "id": "aeb2c098-f4cd-45f5-b195-05001982a875",
+        "name": "Peach Kurta Set ",
+        "category": "women",
+        "price": 90,
+        "occasion": "casual",
+        "image": "http://localhost:8080/data4.jpg",
+        "rating": 3
+      }, {
+        "id": "11978f9c-3366-4cbe-a832-8e85e94cd7df",
+        "name": "Hand Embroidered Kurta",
+        "category": "women",
+        "price": 200,
+        "occasion": "casual",
+        "image": "http://localhost:8080/data5.jpg",
+        "rating": 4
+      }, {
+        "id": "c1cc1cd4-973a-41f4-b8c8-597f17d85d4b",
+        "name": "White Floral Set- Printed",
+        "category": "women",
+        "price": 190,
+        "occasion": "casual",
+        "image": "http://localhost:8080/data6.jpg",
+        "rating": 4
+      }
+]
