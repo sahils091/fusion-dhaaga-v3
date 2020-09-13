@@ -1,0 +1,55 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: $text-color;
+  background-color: $page-bg;
+
+  &__image {
+    background-image: url("../../assets/thread2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 21.875rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      height: 28.125rem;
+    }
+    @include desktop {
+      height: 34.375rem;
+    }
+  }
+  &__subtotal {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  &__header {
+    margin-right: 1rem;
+    padding: 0.625rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    color: $text-color;
+ 
+  }
+
+  &__header-container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  &__image-title {
+    margin-bottom: 1rem;
+    border: 2px solid $text-color;
+    padding: 1.25rem;
+    border-radius: 1rem;
+
+  }
+}
