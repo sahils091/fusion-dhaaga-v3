@@ -1,7 +1,6 @@
 import React from "react";
 import { useStateValue } from "../../StateProvider";
 import "./Checkout.scss";
-import scarf2 from "../../assets/scarf2.jpg";
 import CheckoutProduct from "../CheckOutProduct/CheckOutProduct";
 import Subtotal from "../Subtotal/Subtotal";
 
@@ -10,7 +9,14 @@ const Checkout = () => {
   console.log("Check basket", basket);
   return (
     <div className="checkout">
-      <div className="checkout__image"></div>
+      <div className="checkout__image">
+        <h1 className="checkout__image-title">
+          {" "}
+          YOUR HANDCRAFTED
+          <br />
+          BUNDLE OF JOY
+        </h1>
+      </div>
 
       {basket.length > 0 && (
         <div className="checkout__subtotal">

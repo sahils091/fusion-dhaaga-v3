@@ -3,25 +3,25 @@ import axios from "axios";
 import "./home.scss";
 import Product from "../Product/Product";
 
-
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [productList, setProductList] = useState([]);
+  const [search, setSearch] = useState(null);
 
-  useEffect(()=>{
-   axios.get("http://localhost:8080/").then(
-     res=>{
-       setProductList(res.data);
-     }
-   )
-   axios.get("http://localhost:8080/new").then(
-    res=>{
+  const searchKey = (e) => {
+    let keyword = e.target.value;
+    setSearch(keyword);
+  };
+
+  useEffect(() => {
+    axios.get("http://localhost:8080/").then((res) => {
+      setProductList(res.data);
+    });
+    axios.get("http://localhost:8080/new").then((res) => {
       setProducts(res.data);
-    }
-  )
-
-  },[])
-  console.log(products)
+    });
+  }, []);
+  console.log(products);
   return (
     <main className="home">
       <div className="home__banner-container">
@@ -33,37 +33,58 @@ const Home = () => {
       <div className="home__new">
         <h1 className="home__header">New Arrivals</h1>
         <div className="home__new-products">
-        {products.map((item)=>{
-          return (
-            <Product 
-            id={item.id}
-            title={item.name}
-            price={item.price}
-            rating={item.rating} 
-            image={item.image}
-            />
-          )
-        })}
-          
+          {products.map((item) => {
+            return (
+              <Product
+                id={item.id}
+                title={item.name}
+                price={item.price}
+                rating={item.rating}
+                image={item.image}
+              />
+            );
+          })}
         </div>
       </div>
 
       <div className="home__products">
         <h1 className="home__header">Our Collection</h1>
+        <div className="home__search">
+          <h5 className="home__form-label">Search</h5>
+          <input
+            className="home__form-input"
+            name="search"
+            placeholder="Search by Product Or color Eg. Kurta or Black.."
+            type="text"
+            onChange={searchKey}
+          />
+        </div>
         <div className="home__products-container">
-        {productList.map((item)=>{
-          return (
-            <Product 
-            id={item.id}
-            title={item.name}
-            price={item.price}
-            rating={item.rating} 
-            image={item.image}
-            />
-          )
-
-        })}
-         
+          {productList
+            .filter((data) => {
+              if (search === null) {
+                return data;
+              } else if (
+                data.name.toLowerCase().includes(search.toLowerCase())
+              ) {
+                return data;
+              } else if (
+                data.occasion.toLowerCase().includes(search.toLowerCase())
+              ) {
+                return data;
+              }
+            })
+            .map((item) => {
+              return (
+                <Product
+                  id={item.id}
+                  title={item.name}
+                  price={item.price}
+                  rating={item.rating}
+                  image={item.image}
+                />
+              );
+            })}
         </div>
       </div>
     </main>

@@ -7,12 +7,15 @@
   color: #2f1728;
 
   &__image {
-    background-image: url("../../assets/scarf1.jpg");
+    background-image: url("../../assets/thread2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &__subtotal {
     margin-bottom: 1rem;
@@ -20,15 +23,23 @@
   }
   &__header {
     margin-right: 1rem;
-    padding: 10px;
+    padding: 0.625rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
     color: #2f1728;
+ 
   }
 
   &__header-container {
     width: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
+  }
+  &__image-title {
+    margin-bottom: 1rem;
+    border: 2px solid #2f1728;
+    padding: 1.25rem;
+    border-radius: 1rem;
+
   }
 }

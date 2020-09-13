@@ -1,0 +1,139 @@
+.bespoke {
+    color: #2f1728;
+    background-color: #fff5d7;
+
+&__banner {
+    background-image: url("../../assets/bespoke.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: #2f1728;
+
+}
+&__banner-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+&__banner-subtitle{
+    margin-top: 0.5rem;
+    border: 1px solid #2f1728;
+    border-radius: 1rem;
+    padding: 10px;
+}
+&__blurb {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+&__blurb-header {
+    margin-bottom: 2rem;
+}
+
+&__blurb-text {
+    margin-bottom: 2rem;
+}
+
+&__blurb-title {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+}
+&__options {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem; 
+    
+} 
+&__options-header {
+    margin-bottom: 2rem; 
+}
+
+&__options-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+}
+&__options-blurb {
+    width: 60%;
+}
+&__options-img {
+    height: 11rem;
+}
+&__options--image-last {
+    height: 15rem;
+
+}
+
+
+    &__form-container {
+        width: 18.75rem;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-radius: 0.3125rem;
+        border: 1px solid #2f1728;
+        padding: 1.25rem;
+        height: auto;
+        color: #2f1728;
+        margin-bottom: 2rem;
+      }
+      &__form-header {
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      &__form-label {
+        margin-bottom: 0.625rem;
+      }
+      &__form-input {
+        height: 1.875rem;
+        margin-bottom: 1rem;
+        width: 98%;
+        border: 1px solid #2f1728;
+        border-radius: 0.3rem;
+        font-size: 1rem;
+    
+        &:active :focus {
+          outline-color: #2f1728;
+          border: none;
+        }
+      }
+    
+      &__btn-signin {
+          margin-top: 1rem;
+        margin-bottom: 1rem;
+        background-color: #8d726b;
+        height: 2.25rem;
+        width: 8rem;
+        margin-bottom: 0.5rem;
+        border: 1px solid #2f1728;
+        border-radius: 0.3rem;
+        color: snow;
+        font-size: 1rem;
+        &:active :focus {
+          outline-color: #2f1728;
+          border: none;
+        }
+      }
+    &__form-wrapper {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1rem;
+    padding-right: 1rem;
+    border-top: 1px solid #2f1728;;
+    }  
+
+}

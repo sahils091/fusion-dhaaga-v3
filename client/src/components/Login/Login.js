@@ -57,6 +57,7 @@ const Login = (props) => {
         <button onClick={register} className="login__btn-register">
           Click to Register
         </button>
+     
       </div>
     </div>
   );
