@@ -39,9 +39,9 @@
     border-radius: 0.3rem;
     color: $link-text-color;
     cursor: pointer;
-  &:active {
-    outline-color: $text-color;
-  }
+    &:active {
+      outline-color: $text-color;
+    }
     &:active :focus {
       outline-color: $text-color;
       border: none;

@@ -2,7 +2,6 @@
 @import "../../partials/mixins";
 @import "../../partials/typography";
 
-
 .login {
   display: flex;
   flex-direction: column;
@@ -71,14 +70,12 @@
     color: $link-text-color;
     font-size: 1rem;
     cursor: pointer;
-  &:active {
-    outline-color: $text-color;
-  }
+    &:active {
+      outline-color: $text-color;
+    }
     &:active :focus {
       outline-color: $text-color;
       border: none;
     }
   }
 }
-
-

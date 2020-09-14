@@ -5,7 +5,7 @@ import Product from "../Product/Product";
 
 const Mens = (props) => {
   const [products, setProducts] = useState([]);
-  
+
   const randId = () => {
     return Math.ceil(Math.random() * 2658475);
   };

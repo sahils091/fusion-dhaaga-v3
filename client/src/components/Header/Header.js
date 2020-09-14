@@ -6,8 +6,6 @@ import "./header.scss";
 import { useStateValue } from "../../StateProvider";
 import { auth } from "../../firebase";
 
-
-
 const Header = () => {
   const [{ basket, user }] = useStateValue();
   const handleAuthentication = () => {
@@ -60,7 +58,7 @@ const Header = () => {
           activeClassName="header__link--active"
         >
           <div className="header__link-options">
-          <span className="header__link-one"> </span>
+            <span className="header__link-one"> </span>
             <h3 className="header__link-two">Bespoke</h3>
           </div>
         </NavLink>

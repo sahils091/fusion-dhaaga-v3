@@ -28,16 +28,17 @@ const Login = (props) => {
       .catch((error) => alert(error.message));
   };
 
-  const  signInWithGoogle = (e) => {
+  const signInWithGoogle = (e) => {
     e.preventDefault();
-    auth.signInWithPopup(provider).then((auth)=>{
-      if (auth) {
-        history.push("/");
-      }
-    }) .catch((error) => alert(error.message));
-
-
-  }
+    auth
+      .signInWithPopup(provider)
+      .then((auth) => {
+        if (auth) {
+          history.push("/");
+        }
+      })
+      .catch((error) => alert(error.message));
+  };
   return (
     <div className="login">
       <div className="login__form-container">
@@ -68,7 +69,7 @@ const Login = (props) => {
           Click to Register
         </button>
         <button onClick={signInWithGoogle} className="login__btn-register">
-         Sign In with Google
+          Sign In with Google
         </button>
       </div>
     </div>

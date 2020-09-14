@@ -20,7 +20,6 @@ const Checkout = () => {
         </h1>
       </div>
 
-
       {basket.length > 0 && (
         <div className="checkout__subtotal">
           <Subtotal />
