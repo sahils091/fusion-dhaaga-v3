@@ -17,7 +17,7 @@ const Mens = (props) => {
   }, []);
 
   return (
-    <div className="mens">
+    <div className="mens animate__animated animate__fadeIn">
       <div className="mens__products">
         <h1 className="mens__header">Our Mens Collection</h1>
         <div className="mens__products-container">

@@ -12,7 +12,7 @@ const CheckOutProduct = ({ id, title, image, price, rating }) => {
     });
   };
   return (
-    <div className="checkout-product animate__animated animate__fadeIn">
+    <div className="checkout-product ">
       <img className="checkout-product__image" src={image} />
       <div className="checkout-product__info">
         <h3 className="checkout-product__title"> {title}</h3>
