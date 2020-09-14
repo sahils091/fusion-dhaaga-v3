@@ -41,7 +41,7 @@ const Header = () => {
         >
           <div className="header__link-options">
             <span className="header__link-one"> </span>
-            <span className="header__link-two">Mens</span>
+            <span className="header__link-two">Men's</span>
           </div>
         </NavLink>
         <NavLink
@@ -51,7 +51,7 @@ const Header = () => {
         >
           <div className="header__link-options">
             <span className="header__link-one"> </span>
-            <span className="header__link-two">Women</span>
+            <span className="header__link-two">Women's</span>
           </div>
         </NavLink>
         <NavLink

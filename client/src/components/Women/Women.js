@@ -5,6 +5,9 @@ import "./Women.scss";
 
 const Women = () => {
   const [products, setProducts] = useState([]);
+  const randId = () => {
+    return Math.ceil(Math.random() * 2658475);
+  };
 
   useEffect(() => {
     axios.get("http://localhost:8080/women").then((res) => {
@@ -25,6 +28,7 @@ const Women = () => {
                 price={item.price}
                 rating={item.rating}
                 image={item.image}
+                key={randId()}
               />
             );
           })}

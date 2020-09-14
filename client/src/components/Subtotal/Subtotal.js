@@ -7,7 +7,7 @@ import "./Subtotal.scss";
 const Subtotal = () => {
   const [{ basket }] = useStateValue();
   return (
-    <div className="subtotal">
+    <div className="subtotal animate__animated animate__fadeIn">
       <CurrencyFormat
         renderText={(value) => (
           <>

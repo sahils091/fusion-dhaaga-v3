@@ -43,14 +43,7 @@
     margin-left: 0.625rem;
     margin-right: 0.625rem;
   }
-  &__link-one {
-    font-size: 0.625rem;
-  }
 
-  &__link-two {
-    font-size: 0.8125rem;
-    font-weight: 800;
-  }
   &__option-basket {
     display: flex;
     align-items: center;
@@ -70,7 +63,6 @@
   }
   &__cart-container {
     display: flex;
-    flex-direction: column-reverse;
     margin-left: 1rem;
   }
 }

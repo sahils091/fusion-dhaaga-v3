@@ -10,6 +10,7 @@ import { useStateValue } from "./StateProvider";
 import Mens from "./components/Mens/Mens";
 import Women from "./components/Women/Women";
 import Bespoke from "./components/Bespoke/Bespoke";
+// import Footer from "./components/Footer/Footer";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -32,9 +33,9 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
-        <Route path="/bespoke">
+          <Route path="/bespoke">
             <Header />
-            <Bespoke/>
+            <Bespoke />
           </Route>
           <Route path="/women">
             <Header />

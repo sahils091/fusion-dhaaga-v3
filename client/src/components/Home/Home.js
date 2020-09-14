@@ -25,7 +25,7 @@ const Home = () => {
     });
   }, []);
   return (
-    <main className="home">
+    <main className="home animate__animated animate__fadeIn">
       <div className="home__banner-container">
         <h1 className="home__banner-title">
           Handcrafted With Love <br />

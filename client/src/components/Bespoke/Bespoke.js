@@ -32,7 +32,7 @@ const Bespoke = () => {
       });
   };
   return (
-    <div className="bespoke">
+    <div className="bespoke animate__animated animate__fadeIn">
       <div className="bespoke__banner">
         <div className="bespoke__banner-text">
           <h1 className="bespoke__banner-title">BESPOKE</h1>
@@ -149,7 +149,7 @@ const Bespoke = () => {
             />
 
             <h3 className="bespoke__form-label">
-              Preferred Appointment Date 1* (DD/MM/YYYY)
+              Preferred Appointment Date * (DD/MM/YYYY)
             </h3>
             <input
               className="bespoke__form-input"

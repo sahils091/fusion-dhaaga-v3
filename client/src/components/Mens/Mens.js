@@ -5,6 +5,10 @@ import Product from "../Product/Product";
 
 const Mens = (props) => {
   const [products, setProducts] = useState([]);
+  
+  const randId = () => {
+    return Math.ceil(Math.random() * 2658475);
+  };
 
   useEffect(() => {
     axios.get("http://localhost:8080/mens").then((res) => {
@@ -25,6 +29,7 @@ const Mens = (props) => {
                 price={item.price}
                 rating={item.rating}
                 image={item.image}
+                key={randId()}
               />
             );
           })}
