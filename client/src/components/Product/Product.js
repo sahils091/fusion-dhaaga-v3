@@ -24,7 +24,7 @@ const Product = ({ id, title, image, price, rating }) => {
   return (
     <div className="product animate__animated animate__fadeIn">
       <div className="product__image-container">
-        <img src={image} className="product__image" />
+        <img src={image} className="product__image" alt={title} />
       </div>
       <div className="product__info">
         <h4 className="product__title">{title}</h4>
@@ -36,7 +36,7 @@ const Product = ({ id, title, image, price, rating }) => {
           {Array(rating)
             .fill()
             .map((_) => {
-              return <p key={randId()}>&#11088;</p>;
+              return <p key={randId()}><span aria-label="Star Emoji">&#11088;</span></p>;
             })}
         </div>
       </div>
