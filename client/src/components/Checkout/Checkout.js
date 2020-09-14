@@ -10,7 +10,7 @@ const Checkout = () => {
     return Math.ceil(Math.random() * 2658475);
   };
   return (
-    <div className="checkout">
+    <div className="checkout animate__animated animate__fadeIn">
       <div className="checkout__image">
         <h1 className="checkout__image-title">
           {" "}

@@ -16,7 +16,7 @@ const Women = () => {
   }, []);
 
   return (
-    <div className="women">
+    <div className="women animate__animated animate__fadeIn">
       <div className="women__products">
         <h1 className="women__header">Our Women's Collection</h1>
         <div className="women__products-container">
