@@ -49,6 +49,9 @@
 
   &__blurb-text {
     margin-bottom: 2rem;
+    @include desktop {
+      width: 75%;
+    }
   }
 
   &__blurb-title {
@@ -79,6 +82,9 @@
     @include tablet {
       margin-left: 1rem;
     }
+    @include desktop {
+      width: 60%;
+    }
   }
   &__options-blurb--first {
     margin-left: 0;
@@ -86,9 +92,16 @@
   &__options-img {
     height: 11rem;
     margin-bottom: 2rem;
+    @include desktop {
+      height: 16rem;
+    }
   }
+
   &__options--image-last {
     height: 15rem;
+    @include desktop {
+      height: 18rem;
+    }
   }
 
   &__form-container {
