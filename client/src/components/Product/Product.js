@@ -22,7 +22,7 @@ const Product = ({ id, title, image, price, rating }) => {
     });
   };
   return (
-    <div className="product">
+    <div className="product animate__animated animate__fadeIn">
       <div className="product__image-container">
         <img src={image} className="product__image" />
       </div>
