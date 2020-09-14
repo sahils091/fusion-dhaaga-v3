@@ -6,6 +6,9 @@ import Subtotal from "../Subtotal/Subtotal";
 
 const Checkout = () => {
   const [{ basket }] = useStateValue();
+  const randId = () => {
+    return Math.ceil(Math.random() * 2658475);
+  };
   return (
     <div className="checkout">
       <div className="checkout__image">
@@ -16,6 +19,7 @@ const Checkout = () => {
           BUNDLE OF JOY
         </h1>
       </div>
+
 
       {basket.length > 0 && (
         <div className="checkout__subtotal">
@@ -39,6 +43,7 @@ const Checkout = () => {
                 image={item.image}
                 price={item.price}
                 rating={item.rating}
+                key={randId()}
               />
             ))}
           </div>

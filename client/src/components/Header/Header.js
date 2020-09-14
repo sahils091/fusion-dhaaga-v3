@@ -30,8 +30,8 @@ const Header = () => {
           activeClassName="header__link--active"
         >
           <div className="header__link-options">
-            <span className="header__link-one">{user ? "Returns" : null}</span>
-            <span className="header__link-two">{user ? "Orders" : null} </span>
+            <h3 className="header__link-one">{user ? "Returns" : null}</h3>
+            <h3 className="header__link-two">{user ? "Orders" : null} </h3>
           </div>
         </NavLink>
         <NavLink
@@ -41,7 +41,7 @@ const Header = () => {
         >
           <div className="header__link-options">
             <span className="header__link-one"> </span>
-            <span className="header__link-two">Men's</span>
+            <h3 className="header__link-two">Men's</h3>
           </div>
         </NavLink>
         <NavLink
@@ -51,7 +51,7 @@ const Header = () => {
         >
           <div className="header__link-options">
             <span className="header__link-one"> </span>
-            <span className="header__link-two">Women's</span>
+            <h3 className="header__link-two">Women's</h3>
           </div>
         </NavLink>
         <NavLink
@@ -60,8 +60,8 @@ const Header = () => {
           activeClassName="header__link--active"
         >
           <div className="header__link-options">
-            <span className="header__link-one"> </span>
-            <span className="header__link-two">Bespoke</span>
+          <span className="header__link-one"> </span>
+            <h3 className="header__link-two">Bespoke</h3>
           </div>
         </NavLink>
       </div>
@@ -77,9 +77,9 @@ const Header = () => {
               className="header__link-options"
             >
               <span className="header__link-one"></span>
-              <span className="header__link-two">
+              <h3 className="header__link-two">
                 {user ? "Sign out" : "Sign-In/Register"}
-              </span>
+              </h3>
             </div>
           </NavLink>
 
@@ -88,7 +88,7 @@ const Header = () => {
             className="header__link"
             activeClassName="header__link--active"
           >
-            <span className="header__link-two">Shopping Cart</span>
+            <h3 className="header__link-two">Shopping Cart</h3>
           </NavLink>
           <NavLink to="/checkout" className="header__link">
             <div className="header__cart-container">
