@@ -11,6 +11,7 @@ import Mens from "./components/Mens/Mens";
 import Women from "./components/Women/Women";
 import Bespoke from "./components/Bespoke/Bespoke";
 import Footer from "./components/Footer/Footer";
+import Payment from "./components/Payment/Payment";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -33,6 +34,11 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
+        <Route path="/payment">
+            <Header />
+           <Payment/>
+            <Footer/>
+          </Route>
           <Route path="/bespoke">
             <Header />
             <Bespoke />

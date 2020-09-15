@@ -20,6 +20,8 @@
     border: 1px solid $text-color;
     border-radius: 0.3rem;
     color: $link-text-color;
+    cursor: pointer;
+
     &:active :focus {
       outline-color: $text-color;
       border: none;
