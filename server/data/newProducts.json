@@ -1,0 +1,28 @@
+[
+    {
+        "id": "180fb2c5-c9e9-4549-86aa-80f939513068",
+        "name": "Red Embroidered Kurta Set",
+        "category": "women",
+        "price": 180,
+        "occasion": "casual",
+        "image": "http://localhost:8080/data8.jpg",
+        "rating": 3
+      },
+      {
+        "id": "3403c3b3-bbfe-48d7-9e30-768b33756553",
+        "name": "Navy Kurta Set",
+        "category": "women",
+        "price": 90,
+        "occasion": "bridal",
+        "image": "http://localhost:8080/data9.jpg",
+        "rating": 4
+      }, {
+        "id": "f83137ce-a859-45ac-8efe-7b3545aa8c22",
+        "name": "Printed kurta set",
+        "category": "women",
+        "price": 110,
+        "occasion": "casual",
+         "image": "http://localhost:8080/data10.jpg",
+        "rating": 4
+      }
+]

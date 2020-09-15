@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap");
+
+* {
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: bold;
+  @include tablet {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  @include tablet {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+h3 {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: bold;
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+h4 {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: bold;
+  @include tablet {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+
+p {
+  font-size: 11px;
+  line-height: 16px;
+  display: block;
+  @include tablet {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

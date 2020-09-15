@@ -1,0 +1,29 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
+.footer {
+  background-color: $header-bg;
+  color: $link-text-color;
+  padding: 1rem 1rem;
+
+  &__option-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+  }
+
+  &__option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__option-blurb {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  &__option-title {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

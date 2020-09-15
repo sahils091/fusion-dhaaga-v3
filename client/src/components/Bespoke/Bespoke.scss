@@ -1,0 +1,167 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
+.bespoke {
+  color: $text-color;
+  background-color: $page-bg;
+
+  &__banner {
+    background-image: url("../../assets/bespoke.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 21.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: $text-color;
+    @include tablet {
+      height: 28.125rem;
+    }
+    @include desktop {
+      height: 37.5rem;
+    }
+  }
+  &__banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__banner-subtitle {
+    margin-top: 0.5rem;
+    border: 1px solid $text-color;
+    border-radius: 1rem;
+    padding: 10px;
+  }
+  &__blurb {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__blurb-header {
+    margin-bottom: 2rem;
+  }
+
+  &__blurb-text {
+    margin-bottom: 2rem;
+    @include desktop {
+      width: 75%;
+    }
+  }
+
+  &__blurb-title {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  &__options {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+  }
+  &__options-header {
+    margin-bottom: 2rem;
+  }
+
+  &__options-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  &__options-blurb {
+    margin-bottom: 2rem;
+    @include tablet {
+      margin-left: 1rem;
+    }
+    @include desktop {
+      width: 60%;
+    }
+  }
+  &__options-blurb--first {
+    margin-left: 0;
+  }
+  &__options-img {
+    height: 11rem;
+    margin-bottom: 2rem;
+    @include desktop {
+      height: 16rem;
+    }
+  }
+
+  &__options--image-last {
+    height: 15rem;
+    @include desktop {
+      height: 18rem;
+    }
+  }
+
+  &__form-container {
+    width: 18.75rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 0.3125rem;
+    border: 1px solid $text-color;
+    padding: 1.25rem;
+    height: auto;
+    color: $text-color;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  &__form-header {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  &__form-label {
+    margin-bottom: 0.625rem;
+  }
+  &__form-input {
+    height: 1.875rem;
+    margin-bottom: 1rem;
+    width: 98%;
+    border: 1px solid $text-color;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+
+    &:active :focus {
+      outline-color: $text-color;
+      border: none;
+    }
+  }
+
+  &__btn-signin {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: $header-bg;
+    height: 2.25rem;
+    width: 8rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid $text-color;
+    border-radius: 0.3rem;
+    color: $link-text-color;
+    font-size: 1rem;
+    &:active :focus {
+      outline-color: $text-color;
+      border: none;
+    }
+  }
+  &__form-wrapper {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top: 1px solid $text-color;
+  }
+}

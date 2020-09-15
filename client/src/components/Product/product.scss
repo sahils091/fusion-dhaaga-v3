@@ -1,0 +1,63 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 25rem;
+  max-width: 21.875rem;
+  background-color: transparent;
+  margin: 16px;
+  min-width: 13.75rem;
+  padding: 1.875rem;
+  width: 15.125rem;
+  margin-bottom: 32px;
+  border: 0.0625rem solid $text-color;
+  color: $text-color;
+  border-radius: 3.2px;
+  &:hover {
+    transition: all 0.4s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    border: 1px solid $text-color;
+  }
+  @include tablet {
+    width: 16.125rem;
+  }
+  &__price {
+    margin-top: 0.625rem;
+    margin-bottom: 8px;
+  }
+  &__image {
+    width: 100%;
+    height: 12.5rem;
+    max-height: 21.875rem;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  &__rating {
+    display: flex;
+  }
+  &__info {
+    height: 6.25rem;
+    margin-bottom: 0.9375rem;
+  }
+  &__btn {
+    background-color: $header-bg;
+    height: 2.375rem;
+    width: 8rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid $text-color;
+    border-radius: 0.3rem;
+    color: $link-text-color;
+    cursor: pointer;
+    &:active {
+      outline-color: $text-color;
+    }
+    &:active :focus {
+      outline-color: $text-color;
+      border: none;
+    }
+  }
+}
