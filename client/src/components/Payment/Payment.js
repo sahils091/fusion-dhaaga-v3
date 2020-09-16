@@ -68,20 +68,20 @@ const Payment = () => {
   };
   return (
     <div className="payment">
-      <h1>
-        Checkout (<Link to="/checkout">{basket.length}items</Link>)
+      <h1 className="payment__header">
+        Checkout (<Link className="payment__header--link" to="/checkout">{basket.length} Items</Link>)
       </h1>
 
       <div className="payment__container">
         <div className="payment__section">
-          <div className="payment__section-title">
+          {/* <div className="payment__section-title">
             <h3>Delivery Address</h3>
           </div>
           <div className="payment__address">
             <p>{user?.email}</p>
             <p>123 React Lane, </p>
             <p>LA, CA</p>
-          </div>
+          </div> */}
         </div>
 
         <div className="payment__section">
@@ -123,7 +123,7 @@ const Payment = () => {
                   thousandSeparator={true}
                   prefix={"$"}
                 />
-                <button disabled={processing || disabled || succeeded}>
+                <button className="payment__btn" disabled={processing || disabled || succeeded}>
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
               </div>
