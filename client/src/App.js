@@ -12,6 +12,11 @@ import Women from "./components/Women/Women";
 import Bespoke from "./components/Bespoke/Bespoke";
 import Footer from "./components/Footer/Footer";
 import Payment from "./components/Payment/Payment";
+import {loadStripe} from "@stripe/stripe-js";
+import {Elements} from "@stripe/react-stripe-js";
+
+const promise = loadStripe("pk_test_51HRet9A1mp6b1b4kpivlHecgvgMU4nlsKTPAgo4eRV6dmzKeXe1Bihy0TouGinPTQ7kNXdAYWBMAT8OVGwt0xTml00hVyfZ5eS");
+
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -36,8 +41,10 @@ function App() {
         <Switch>
         <Route path="/payment">
             <Header />
+            <Elements stripe={promise}>
            <Payment/>
-            <Footer/>
+           </Elements>
+            {/* <Footer/> */}
           </Route>
           <Route path="/bespoke">
             <Header />

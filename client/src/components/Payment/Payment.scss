@@ -1,0 +1,10 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
+.payment {
+//   height: 100vh;
+    &__details {
+        margin-bottom: 2rem;
+    }
+}
