@@ -3,46 +3,46 @@
 @import "../../partials/typography";
 
 .payment {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    background-color: $page-bg;
- //height: 100vh;
-    &__section {
-        margin-bottom: 2rem;
-        margin-top: 2rem;
-    }
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: $page-bg;
+  //height: 100vh;
+  &__section {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
 
-    &__section-title {
-        margin-bottom: 2rem;
-         margin-top: 2rem; 
-    }
+  &__section-title {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
 
-    &__header {
-        margin-bottom: 2rem;
-         padding-top: 2rem; 
-    }
+  &__header {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+  }
 
-    &__header--link {
-        text-decoration: none;
-        color: black;
+  &__header--link {
+    text-decoration: none;
+    color: black;
+  }
+  &__items {
+    width: 70%;
+  }
+  &__btn {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: $header-bg;
+    height: 2.25rem;
+    width: 8rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid $text-color;
+    border-radius: 0.3rem;
+    color: $link-text-color;
+    font-size: 1rem;
+    &:active :focus {
+      outline-color: $text-color;
+      border: none;
     }
-    &__items {
-        width: 70%;
-    }
-    &__btn {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        background-color: $header-bg;
-        height: 2.25rem;
-        width: 8rem;
-        margin-bottom: 0.5rem;
-        border: 1px solid $text-color;
-        border-radius: 0.3rem;
-        color: $link-text-color;
-        font-size: 1rem;
-        &:active :focus {
-          outline-color: $text-color;
-          border: none;
-        }
-    }
+  }
 }

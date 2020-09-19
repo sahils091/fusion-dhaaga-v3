@@ -7,7 +7,7 @@ import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "../../reducer";
 import axios from "../../axios";
-import {db} from "../../firebase";
+import { db } from "../../firebase";
 
 const Payment = () => {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -50,12 +50,15 @@ const Payment = () => {
         }, // de-structure confirmation from response: called paymentIntent from stripe.
       })
       .then(({ paymentIntent }) => {
-
-          db.collection('users').doc(user?.uid).collection('orders').doc(paymentIntent.id).set({
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
             basket: basket,
             amount: paymentIntent.amount,
-            created: paymentIntent.created
-          })
+            created: paymentIntent.created,
+          });
 
         setSucceeded(true);
         setError(null);
@@ -78,7 +81,11 @@ const Payment = () => {
   return (
     <div className="payment">
       <h1 className="payment__header">
-        Checkout (<Link className="payment__header--link" to="/checkout">{basket.length} Items</Link>)
+        Checkout (
+        <Link className="payment__header--link" to="/checkout">
+          {basket.length} Items
+        </Link>
+        )
       </h1>
 
       <div className="payment__container">
@@ -132,7 +139,10 @@ const Payment = () => {
                   thousandSeparator={true}
                   prefix={"$"}
                 />
-                <button className="payment__btn" disabled={processing || disabled || succeeded}>
+                <button
+                  className="payment__btn"
+                  disabled={processing || disabled || succeeded}
+                >
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
               </div>

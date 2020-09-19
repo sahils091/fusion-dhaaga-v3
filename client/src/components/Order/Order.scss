@@ -1,0 +1,30 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
+.order {
+  color: $text-color;
+  background-color: $page-bg;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &__header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__timestamp {
+    padding-bottom: 1rem;
+  }
+  &__item {
+    width: 50%;
+  }
+  &__total {
+    padding-bottom: 1rem;
+  }
+}

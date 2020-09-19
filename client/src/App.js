@@ -12,12 +12,13 @@ import Women from "./components/Women/Women";
 import Bespoke from "./components/Bespoke/Bespoke";
 import Footer from "./components/Footer/Footer";
 import Payment from "./components/Payment/Payment";
-import {loadStripe} from "@stripe/stripe-js";
-import {Elements} from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./components/Orders/Orders";
 
-const promise = loadStripe("pk_test_51HRet9A1mp6b1b4kpivlHecgvgMU4nlsKTPAgo4eRV6dmzKeXe1Bihy0TouGinPTQ7kNXdAYWBMAT8OVGwt0xTml00hVyfZ5eS");
-
+const promise = loadStripe(
+  "pk_test_51HRet9A1mp6b1b4kpivlHecgvgMU4nlsKTPAgo4eRV6dmzKeXe1Bihy0TouGinPTQ7kNXdAYWBMAT8OVGwt0xTml00hVyfZ5eS"
+);
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -40,47 +41,47 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
-        <Route path="/orders">
+          <Route path="/orders">
             <Header />
-            <Orders/>
+            <Orders />
             {/* <Footer/> */}
           </Route>
-        <Route path="/payment">
+          <Route path="/payment">
             <Header />
             <Elements stripe={promise}>
-           <Payment/>
-           </Elements>
+              <Payment />
+            </Elements>
             {/* <Footer/> */}
           </Route>
           <Route path="/bespoke">
             <Header />
             <Bespoke />
-            <Footer/>
+            <Footer />
           </Route>
           <Route path="/women">
             <Header />
             <Women />
-            <Footer/>
+            <Footer />
           </Route>
           <Route path="/mens">
             <Header />
             <Mens />
-            <Footer/>
+            <Footer />
           </Route>
           <Route path="/checkout">
             <Header />
             <Checkout />
-            <Footer/>
+            <Footer />
           </Route>
           <Route path="/login">
             <Header />
             <Login />
-            <Footer/>
+            <Footer />
           </Route>
           <Route exact path="/">
             <Header />
             <Home />
-            <Footer/>
+            <Footer />
           </Route>
         </Switch>
       </div>

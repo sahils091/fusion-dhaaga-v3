@@ -23,12 +23,11 @@ const Header = () => {
 
       <div className="header__link-container">
         <NavLink
-          to="/profile"
+          to="/orders"
           className="header__link"
           activeClassName="header__link--active"
         >
           <div className="header__link-options">
-            <h3 className="header__link-one">{user ? "Returns" : null}</h3>
             <h3 className="header__link-two">{user ? "Orders" : null} </h3>
           </div>
         </NavLink>
