@@ -1,0 +1,12 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/typography";
+
+
+
+.orders {
+    color: $text-color;
+    background-color: $page-bg;
+    padding: 20px 80px ;
+     
+}

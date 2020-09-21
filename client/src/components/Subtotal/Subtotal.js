@@ -2,10 +2,12 @@ import React from "react";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "../../reducer";
 import { useStateValue } from "../../StateProvider";
+import  {useHistory} from "react-router-dom";
 import "./Subtotal.scss";
 
 const Subtotal = () => {
   const [{ basket }] = useStateValue();
+  const history = useHistory();
   return (
     <div className="subtotal animate__animated animate__fadeIn">
       <CurrencyFormat
@@ -21,7 +23,7 @@ const Subtotal = () => {
         displayType={"text"}
         prefix={"$"}
       />
-      <button className="subtotal__btn">Proceed To Checkout</button>
+      <button onClick={e => history.push("/payment")} className="subtotal__btn">Proceed To Checkout</button>
     </div>
   );
 };
