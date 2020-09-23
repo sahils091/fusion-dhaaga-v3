@@ -3,9 +3,11 @@ import { useStateValue } from "../../StateProvider";
 import "./Checkout.scss";
 import CheckoutProduct from "../CheckOutProduct/CheckOutProduct";
 import Subtotal from "../Subtotal/Subtotal";
+import { useSpring, animated } from "react-spring";
 
 const Checkout = () => {
   const [{ basket }] = useStateValue();
+  const style = useSpring({ opacity: 1, from: { opacity: 0 } });
   const randId = () => {
     return Math.ceil(Math.random() * 2658475);
   };
@@ -21,9 +23,9 @@ const Checkout = () => {
       </div>
 
       {basket.length > 0 && (
-        <div className="checkout__subtotal">
+        <animated.div style={style} className="checkout__subtotal">
           <Subtotal />
-        </div>
+        </animated.div>
       )}
 
       <div className="checkout__left">
