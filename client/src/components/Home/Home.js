@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./home.scss";
 import Product from "../Product/Product";
+import {useSpring, animated } from "react-spring";
+import {Spring} from 'react-spring/renderprops'
 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [productList, setProductList] = useState([]);
   const [search, setSearch] = useState(null);
+  const style =  useSpring({opacity: 1, from: {opacity:0}});
 
   const randId = () => {
     return Math.ceil(Math.random() * 2658475);
@@ -25,18 +28,29 @@ const Home = () => {
     });
   }, []);
   return (
+    
     <main className="home animate__animated animate__fadeIn">
-      <div className="home__banner-container">
-        <h1 className="home__banner-title">
+       <div className="home__banner-container">
+      <animated.div style={style}>
+      <h1 className="home__banner-title">
           Handcrafted With Love <br />
           Since 2015
         </h1>
+      </animated.div> 
       </div>
+
+    <Spring
+    from={{ opacity: 0}}
+    to={{opacity: 1}}>
+    
+
+      {props => ( 
       <div className="home__new">
         <h1 className="home__header">New Arrivals</h1>
         <div className="home__new-products">
           {products.map((item) => {
             return (
+              <animated.div style={style}>
               <Product
                 id={item.id}
                 title={item.name}
@@ -45,12 +59,23 @@ const Home = () => {
                 image={item.image}
                 key={randId()}
               />
+              </animated.div>
             );
           })}
         </div>
       </div>
+      )}
+      </Spring>
 
-      <div className="home__products">
+      <Spring
+    from={{ opacity: 0}}
+    to={{opacity: 1}}
+    config={{delay:1000, duration: 1000}}>
+    
+
+      {props => ( 
+  
+        <div className="home__products">
         <h1 className="home__header">Our Collection</h1>
         <div className="home__search">
           <h3 className="home__form-label">Search</h3>
@@ -91,7 +116,12 @@ const Home = () => {
             })}
         </div>
       </div>
+      )}
+      </Spring>
     </main>
+
+      
+
   );
 };
 
