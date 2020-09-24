@@ -14,7 +14,7 @@ const Header = () => {
     }
   };
   return (
-    <nav className="header">
+    <nav className="header animate__animated animate__fadeIn">
       <div className="header__logo-container">
         <Link to="/">
           <img className="header__logo" src={logo1} alt="Fusion" />
@@ -90,7 +90,7 @@ const Header = () => {
           <NavLink to="/checkout" className="header__link">
             <div className="header__cart-container">
               <ShoppingBasket />
-              <span className="header__link-two header__basket-count">
+              <span className="header__link-two header__basket-count ">
                 {basket?.length}
               </span>
             </div>

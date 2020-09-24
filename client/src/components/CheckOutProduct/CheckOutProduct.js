@@ -28,7 +28,7 @@ const CheckOutProduct = ({ id, title, image, price, rating, hideButton }) => {
             })}
         </div>
            {!hideButton && (
-            <button onClick={removeFromBasket} className="checkout-product__btn">
+            <button onClick={removeFromBasket} className="checkout-product__btn animate__fadeOut">
           Remove from Cart
         </button>
 
