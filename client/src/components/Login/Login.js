@@ -40,7 +40,7 @@ const Login = (props) => {
       .catch((error) => alert(error.message));
   };
   return (
-    <div className="login">
+    <div className="login animate__animated animate__fadeIn">
       <div className="login__form-container">
         <h1 className="login__form-header">Sign-in</h1>
         <form className="login__form">
