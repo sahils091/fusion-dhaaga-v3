@@ -5,8 +5,11 @@ import CheckOutProduct from "../CheckOutProduct/CheckOutProduct";
 import CurrencyFormat from "react-currency-format";
 
 const Order = ({ order }) => {
+  const randId = () => {
+    return Math.ceil(Math.random() * 2658475);
+  };
   return (
-    <div className="order">
+    <div className="order" key={randId()}>
       <h2 className="order__header">Order</h2>
 
       <CurrencyFormat
@@ -30,7 +33,7 @@ const Order = ({ order }) => {
 
       {order.data.basket?.map((item) => {
         return (
-          <div className="order__item">
+          <div className="order__item" key={randId()}>
             <CheckOutProduct
               id={item.id}
               title={item.title}
@@ -38,6 +41,7 @@ const Order = ({ order }) => {
               price={item.price}
               rating={item.rating}
               hideButton
+              key={randId()}
             />
           </div>
         );

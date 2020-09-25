@@ -8,6 +8,9 @@ const Orders = () => {
 
   const [orders, setOrders] = useState([]);
   const [{ basket, user }, dispatch] = useStateValue();
+  const randId = () => {
+    return Math.ceil(Math.random() * 265847554651651381);
+  };
 
   useEffect(()=>{
     if (user) {
@@ -26,13 +29,14 @@ const Orders = () => {
   },[user]);
 
   return (
-    <div className="orders  animate__animated animate__fadeIn">
+    <div className="orders  animate__animated animate__fadeIn" key={randId()}>
       <h1> Your Orders</h1>
 
-      <div className="orders__container">
+      <div className="orders__container" key={randId()}>
            {orders?.map((order)=>{
              return(
-              <Order order={order}/>
+              <Order order={order} key={randId()}
+              />
              )
            })}
 

@@ -10,13 +10,12 @@
     background-image: url("../../assets/thread.jpg");
     background-position: center;
     background-size: cover;
-    max-width: 93.75rem;
     margin-left: auto;
     margin-right: auto;
     height: 350px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
     @include tablet {
       height: 450px;
     }
