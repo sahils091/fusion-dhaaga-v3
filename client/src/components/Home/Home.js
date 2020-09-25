@@ -45,7 +45,7 @@ const Home = () => {
             <div className="home__new-products">
               {products.map((item) => {
                 return (
-                  <animated.div style={style}  key={randId()}>
+                  <div   key={randId()}>
                     <Product
                       id={item.id}
                       title={item.name}
@@ -54,7 +54,7 @@ const Home = () => {
                       image={item.image}
                       key={randId()}
                     />
-                  </animated.div>
+                  </div>
                 );
               })}
             </div>
@@ -65,7 +65,6 @@ const Home = () => {
       <Spring
         from={{ opacity: 0 }}
         to={{ opacity: 1 }}
-        config={{ delay: 1000, duration: 1000 }}
       >
         {(props) => (
           <div className="home__products"  key={randId()}>

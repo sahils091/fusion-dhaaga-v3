@@ -26,7 +26,7 @@ const Orders = () => {
   },[user]);
 
   return (
-    <div className="orders">
+    <div className="orders  animate__animated animate__fadeIn">
       <h1> Your Orders</h1>
 
       <div className="orders__container">
