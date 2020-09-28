@@ -3,6 +3,8 @@ import "./Orders.scss";
 import {db} from "../../firebase";
 import { useStateValue } from "../../StateProvider";
 import Order from "../Order/Order";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Orders = () => {
 
@@ -25,11 +27,13 @@ const Orders = () => {
     }else {
       setOrders([]);
     }
-   
+    Aos.init({
+      duration: 2000,
+    });
   },[user]);
 
   return (
-    <div className="orders  animate__animated animate__fadeIn" key={randId()}>
+    <div  data-aos="fade-up" className="orders   animate__animated animate__fadeIn" key={randId()}>
       <h1> Your Orders</h1>
 
       <div className="orders__container" key={randId()}>

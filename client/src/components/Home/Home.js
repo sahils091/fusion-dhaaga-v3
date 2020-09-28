@@ -4,6 +4,8 @@ import "./home.scss";
 import Product from "../Product/Product";
 import { useSpring, animated } from "react-spring";
 import { Spring } from "react-spring/renderprops";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -26,9 +28,12 @@ const Home = () => {
     axios.get("http://localhost:8080/new").then((res) => {
       setProducts(res.data);
     });
+    Aos.init({
+      duration: 2000,
+    });
   }, []);
   return (
-    <main className="home animate__animated animate__fadeIn">
+    <main  className="home animate__animated animate__fadeIn">
       <div className="home__banner-container">
         <animated.div style={style}>
           <h1 className="home__banner-title">
@@ -40,12 +45,12 @@ const Home = () => {
 
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
-          <div className="home__new"  key={randId()}>
+          <div  data-aos="fade-up" className="home__new" key={randId()}>
             <h1 className="home__header">New Arrivals</h1>
             <div className="home__new-products">
               {products.map((item) => {
                 return (
-                  <div   key={randId()}>
+                  <div key={randId()}>
                     <Product
                       id={item.id}
                       title={item.name}
@@ -62,12 +67,9 @@ const Home = () => {
         )}
       </Spring>
 
-      <Spring
-        from={{ opacity: 0 }}
-        to={{ opacity: 1 }}
-      >
+      <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
-          <div className="home__products"  key={randId()}>
+          <div  data-aos="fade-up" className="home__products" key={randId()}>
             <h1 className="home__header">Our Collection</h1>
             <div className="home__search">
               <h3 className="home__form-label">Search</h3>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Order.scss";
 import moment from "moment";
 import CheckOutProduct from "../CheckOutProduct/CheckOutProduct";
