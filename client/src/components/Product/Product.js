@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useStateValue } from "../../StateProvider";
 import "./product.scss";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Product = ({ id, title, image, price, rating }) => {
   const [{}, dispatch] = useStateValue();
@@ -21,6 +23,7 @@ const Product = ({ id, title, image, price, rating }) => {
       },
     });
   };
+
   return (
     <div className="product ">
       <div className="product__image-container">

@@ -1,10 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const products = require("./data/products.json");
-const newProducts = require("./data/newProducts.json");
-const mens = require("./data/mens.json");
-const women = require("./data/women.json");
+const mysql = require("mysql");
 const userMessage = require("./data/userMessage.json");
 
 require("dotenv").config();
@@ -13,24 +10,59 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("assets"));
 
+const connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "rootroot",
+  database: "fusion-data",
+});
+
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server listening on ${PORT}`));
 
 app.get("/", (req, res) => {
-  res.status(200).json(products);
+  connection.query("SELECT * FROM all_products LIMIT 0, 10", function (
+    error,
+    results,
+    fields
+  ) {
+    if (error) throw error;
+    res.send(results);
+  });
 });
 
 app.get("/new", (req, res) => {
-  res.status(200).json(newProducts);
+  connection.query("SELECT * FROM new_products LIMIT 0, 10", function (
+    error,
+    results,
+    fields
+  ) {
+    if (error) throw error;
+    res.send(results);
+  });
 });
 
 app.get("/mens", (req, res) => {
-  res.status(200).json(mens);
+  connection.query("SELECT * FROM mens LIMIT 0, 10", function (
+    error,
+    results,
+    fields
+  ) {
+    if (error) throw error;
+    res.send(results);
+  });
 });
 
 app.get("/women", (req, res) => {
-  res.status(200).json(women);
+  connection.query("SELECT * FROM womens LIMIT 0, 10", function (
+    error,
+    results,
+    fields
+  ) {
+    if (error) throw error;
+    res.send(results);
+  });
 });
 
 app.post("/user/message", (req, res) => {
