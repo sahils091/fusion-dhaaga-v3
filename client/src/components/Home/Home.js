@@ -33,7 +33,7 @@ const Home = () => {
     });
   }, []);
   return (
-    <main  className="home animate__animated animate__fadeIn">
+    <main className="home animate__animated animate__fadeIn">
       <div className="home__banner-container">
         <animated.div style={style}>
           <h1 className="home__banner-title">
@@ -45,7 +45,7 @@ const Home = () => {
 
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
-          <div  data-aos="fade-up" className="home__new" key={randId()}>
+          <div data-aos="fade-up" className="home__new" key={randId()}>
             <h1 className="home__header">New Arrivals</h1>
             <div className="home__new-products">
               {products.map((item) => {
@@ -69,7 +69,7 @@ const Home = () => {
 
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
         {(props) => (
-          <div  data-aos="fade-up" className="home__products" key={randId()}>
+          <div data-aos="fade-up" className="home__products" key={randId()}>
             <h1 className="home__header">Our Collection</h1>
             <div className="home__search">
               <h3 className="home__form-label">Search</h3>
